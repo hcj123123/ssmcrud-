@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<settings>
+<setting name="mapUnderscoreToCamelCase" value="true"></setting>
+</settings>
+
+
+
+<typeAliases>
+<!-- <typeAlias type="com.sikiedu.bean.User" alias="user"/> -->
+<package name="com.atguigu.crud.bean"/>
+</typeAliases>
+
+
+<plugins>
+<plugin interceptor="com.github.pagehelper.PageInterceptor">
+<property name="reasonable" value="true"/>
+</plugin>
+</plugins>
+<!--   <mappers>
+    <mapper resource="mapper/UserMapper.xml"/>
+   <mapper class="com.sikiedu.mapper.UserMapper"></mapper>
+ <package name="com.sikiedu.mapper"></package>
+ <mapper   resource="cn/sxt/vo/user.mapper.xml"/>
+  </mappers> -->
+</configuration>
